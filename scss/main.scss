@@ -1,0 +1,187 @@
+@import "globals";
+
+
+
+//*----------------------------------------> Desktop
+
+
+    body {
+        width: 100vw;
+        height: 100vh;
+
+
+        //*--------------------> Body Background
+
+        background-color: $pr-pale-blue;
+        background-image: url(../images/pattern-background-desktop.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    main {
+        width: 450px;
+        height: 697px;
+        background-color: white;
+        overflow: hidden;
+        box-shadow: 0px 20px 20px hsla(245, 75%, 52%, 10%);
+
+        h1 {
+            margin: 46px 0 0;
+            color: $nu-Dark-blue;
+            font-size: 1.75rem;
+        }
+
+        p {
+            margin: 15px 0 0 0;
+            width: 300px;
+            text-align: center;
+            color: $nu-Desaturated-blue;
+            line-height: 1.65;
+            font-size: 1rem;
+        }
+
+        nav {
+            margin: 18px 0 0;
+            width: 354px;
+            height: 98px;
+            background-color: $nu-Very-pale-blue;
+            grid-template-columns: 1fr 2fr 1fr;
+            padding: 0 0.4em;
+
+            aside {
+                justify-self: flex-start;
+
+                p:nth-of-type(1) {
+                    color: $nu-Dark-blue;
+                }
+
+                p {
+                    width: auto;
+                    height: auto;
+                    margin: 0;
+                }
+            }
+
+            a {
+                font-size: 0.9rem;
+                color: $pr-bright-blue;
+
+                &:hover, &:focus, &:active {
+                    opacity: 0.75;
+                    text-decoration: none;
+                }
+            }
+        }
+
+        button {
+            margin: 32px 0 0 0;
+            width: 354px;
+            height: 50px;
+            border: none;
+            background-color: $pr-bright-blue;
+            color: white;
+            font-size: 0.9rem;
+            letter-spacing: 1.5;
+            cursor: pointer;
+            box-shadow: 0px 15px 20px hsla(245, 75%, 52%, 25%);
+
+            &:hover, &:focus, &:active {
+                opacity: 0.75;
+            }
+        }
+
+        .cancel-order {
+            margin: 32px 0 0;
+            font-size: 0.95rem;
+            text-decoration: none;
+            color: $nu-Desaturated-blue;
+
+            &:hover, &:focus, &:active {
+                color: black;
+            }
+        }
+    }
+
+    //*--------------------> Attribution
+
+    .attribution {
+        position: absolute;
+        width: 100vw;
+        height: 40px;
+        bottom: 0;
+        font-size: .8rem;
+        gap: .5rem;
+        opacity: 0.5;
+
+        p {
+            color: $nu-Desaturated-blue;
+        }
+
+        a {
+            color: $pr-bright-blue;
+            text-decoration: none;
+        }
+    }
+
+
+//*----------------------------------------> Mobile
+
+@media screen and (max-width: 500px) {
+
+    body {
+        background-image: url(../images/pattern-background-mobile.svg);
+    }
+
+    main {
+        width: 327px;
+        height: 567px;
+
+        img:nth-of-type(1) {
+            width: 100%;
+        }
+
+        h1 {
+            margin: 32px 0 0;
+            font-size: 1.38rem;
+        }
+
+        p {
+            width: 262px;
+            font-size: 0.95rem;
+        }
+
+        nav {
+            margin: 24px 0 0 0;
+            width: 279px;
+            height: 80px;
+            padding: 0 5px;
+
+            img {
+                width: auto !important;
+                height: auto;
+            }
+
+            aside {
+                margin-left: 0.8rem;
+                
+                p {
+                    font-size: 0.9rem;
+                }
+            }
+
+            a {
+                font-size: 0.8rem;
+            }   
+        }
+
+        button {
+            margin: 24px 0 0 0;
+            width: 279px;
+            height: 50px;
+        }
+
+        .cancel-order {
+            margin: 24px 0 0;
+        }
+    }
+}

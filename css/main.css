@@ -102,13 +102,13 @@ main nav {
   grid-template-columns: 1fr 2fr 1fr;
   padding: 0 0.4em;
 }
-main nav aside {
+main nav .plan {
   justify-self: flex-start;
 }
-main nav aside p:nth-of-type(1) {
+main nav .plan p:nth-of-type(1) {
   color: hsl(223deg, 47%, 23%);
 }
-main nav aside p {
+main nav .plan p {
   width: auto;
   height: auto;
   margin: 0;
@@ -192,10 +192,10 @@ main .cancel-order:hover, main .cancel-order:focus, main .cancel-order:active {
     width: auto !important;
     height: auto;
   }
-  main nav aside {
+  main nav .plan {
     margin-left: 0.8rem;
   }
-  main nav aside p {
+  main nav .plan p {
     font-size: 0.9rem;
   }
   main nav a {
